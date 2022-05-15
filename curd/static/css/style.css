@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    background: rgb(12, 4, 44);
+    padding: 10px;
+}
+.item{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 16px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+.btn{
+    border:2px solid black;
+    
+    padding: 5px;
+    border-radius: 5px;
+}
+.btn-update {
+    text-decoration: none;
+    background: rgb(20, 171, 218);
+}
+.btn-submit {
+    background: teal;
+
+}
+.btn-delete {
+    background: red;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}

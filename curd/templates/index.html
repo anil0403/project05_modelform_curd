@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item form"><span>Add data</span>
+            <form action="" method='POsT'> {% csrf_token %}
+                {{form.as_p}}
+                <button type='submit' class="btn btn-submit"> Submit</button>
+            </form>
+        </div>
+        <div class="item show" style="overflow-x:auto;"><span>Show and Delete Data</span> 
+            {% if data %}
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+
+                </tr>
+                {% for item in data %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.address}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>
+                        <button class="btn btn-update"> <a href='{% url 'update' item.id %}' >Update</a> </button>
+                        <button class="btn btn-delete"> <a href='{% url 'delete' item.id %}'>Delete</a> </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <h3>Data Not Available</h3>
+            {% endif %}
+
+        </div>
+    </div>
+</body>
+</html>
