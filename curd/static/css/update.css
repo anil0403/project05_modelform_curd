@@ -1,0 +1,25 @@
+.update-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(2, 100, 100); */
+}
+.update-container .form{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: teal;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+input[type="submit"]{
+    color: white;
+
+    padding: 8px;
+    font-size: 18px;
+    background: black;
+    border: none;
+    border-radius: 10px;
+}
